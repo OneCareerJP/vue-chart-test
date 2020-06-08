@@ -10,7 +10,7 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
-import Horizontal from "@/components/Horizontal.vue";
+import Horizontal from "@/components/Chart/Horizontal/index.vue";
 
 @Component({
   components: {

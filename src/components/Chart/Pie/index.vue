@@ -6,8 +6,6 @@
 import Vue from "vue";
 import { Chart } from "chart.js";
 import { Data, Methods, Computed, Props } from "./types";
-// @ts-ignore
-// import { customDraw } from "./roundedBar";
 
 export default Vue.extend<Data, Methods, Computed, Props>({
   name: "PieChart",
@@ -44,9 +42,6 @@ export default Vue.extend<Data, Methods, Computed, Props>({
       this.onChangeChartData();
     }
   },
-  created() {
-    // this.customDrawInit();
-  },
   mounted() {
     this.generateChart();
   },
@@ -66,10 +61,6 @@ export default Vue.extend<Data, Methods, Computed, Props>({
         data: this.chartData,
         options: this.chartOptions
       });
-    },
-    customDrawInit() {
-      // @ts-ignore
-      // Chart.elements.Rectangle.prototype.draw = customDraw;
     },
     onChangeChartData() {
       if (!this.chart) return;
